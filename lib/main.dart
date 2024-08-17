@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:navigator/tela_principal.dart';
+import 'package:navigator/tela_secundaria.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: TelaPrincipal(),
+  runApp(MaterialApp(
+    initialRoute: "/",
+    routes: {
+      "/secundaria" : (context) => TelaSecundaria(),
+    },
+    home: const TelaPrincipal(),
   ));
 }
 

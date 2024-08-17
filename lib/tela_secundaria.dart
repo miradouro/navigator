@@ -2,6 +2,7 @@ import 'package:navigator/tela_principal.dart';
 import 'package:flutter/material.dart';
 
 class TelaSecundaria extends StatefulWidget {
+
   const TelaSecundaria({super.key});
 
   @override
@@ -23,14 +24,15 @@ class _TelaSecundariaState extends State<TelaSecundaria> {
           children: [
             ElevatedButton(
               onPressed: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => TelaPrincipal(),
-                  ),
-                );
+                Navigator.pop(context);
                 },
-              child: const Text("Voltar para a primeira tela"),
+              child: const Text("pop"),
+            ),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.pushNamed(context, "/");
+              },
+              child: Text("PushNamed"),
             ),
           ],
         ),
